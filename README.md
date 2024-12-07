@@ -1,4 +1,5 @@
 ### this was rushed in a day so the code might be scuffed
+#### Demo: https://jeff-160.github.io/Minesweeper/
 
 ---
 

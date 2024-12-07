@@ -67,6 +67,11 @@ const Game = {
     },
 
     PopulateGrid(safeX, safeY) {
+        this.Grid.forEach(row => row.forEach(cell => {
+            cell.flagged = false
+            cell.classList.remove('flag')
+        }))
+
         const pos = {}
 
         for (let i = 0 ; i < this.GridWidth ; i++) {
