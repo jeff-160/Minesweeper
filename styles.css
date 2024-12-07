@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "CustomFont";	
+    src: url("font.ttf");
+}
+
+* {
+    font-family: "CustomFont";
+    background: black;
+    user-select: none;
+}
+
+#screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.mine {
+    background-image: url('assets/mine.png');
+}
+
+.flag {
+    background-image: url('assets/flag.png')
+}
+
+#cell {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-size: 100% 100%;
+}
+
+#cell:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
