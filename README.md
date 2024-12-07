@@ -1,1 +1,1 @@
-### this was in a few hours, code might be scuffed
+### this was made in a few hours, code might be scuffed
