@@ -4,13 +4,11 @@ function ClickEvent(e){
 
     const cell = e.target
 
-    if (!Game.Mines.length)
-        return Game.PopulateGrid(cell.x, cell.y)
-
     switch (e.which) {
         case 1:
-            if (!cell.revealed)
-                Game.Reveal(cell)
+            if (!cell.revealed && !cell.flagged) {
+                Game.Mines.length > 0 ? Game.Reveal(cell) : Game.PopulateGrid(cell.x, cell.y)
+            }
 
             break
         case 2:

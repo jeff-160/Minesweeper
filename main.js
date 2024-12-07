@@ -82,10 +82,7 @@ const Game = {
 
         for (let i = 0 ; i < this.MineCount ; i++) {
             const y = RandElem(Object.keys(pos))
-            const index = RandInt(0, pos[y].length - 1)
-            const x = pos[y][index]
-            
-            pos[y].splice(index, 1)
+            const x = pos[y].splice(RandInt(0, pos[y].length - 1), 1)[0]
 
             if (!pos[y])
                 delete pos[y]
