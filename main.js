@@ -5,7 +5,7 @@ window.onload = ()=> {
 const Game = {
     Screen: null,
     Grid: [],
-    GridWidth: 7,
+    GridWidth: 15,
     CellWidth: null,
     MineCount: 0,
     Mines: [],
@@ -159,6 +159,7 @@ const Game = {
             }
 
             cell.classList.add("mine")
+            this.End("You lose!")
         }
 
         else {
@@ -179,10 +180,8 @@ const Game = {
     
             cell.style.backgroundColor = (cell.x + cell.y) % 2 ? "#B87333" : "#C4A484"
 
-            if (!this.Ended && (this.Revealed == (this.GridWidth ** 2 - this.MineCount))) {
-                this.Ended = true
-                return alert("YOU WIN!")
-            }
+            if (!this.Ended && (this.Revealed == (this.GridWidth ** 2 - this.MineCount)))
+                this.End("You win!")
         }
     },
 
@@ -202,4 +201,13 @@ const Game = {
                 this.Reveal(next)
         }
     },
+    
+    End(text) {
+        this.Ended = true
+
+        const notif = document.querySelector("#notif")
+
+        notif.style.display = "flex"
+        notif.innerHTML = text
+    }
 }

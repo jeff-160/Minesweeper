@@ -4,18 +4,23 @@
 }
 
 * {
-    font-family: "CustomFont";
     background: black;
     user-select: none;
+    
+    font-family: "CustomFont";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#screen {
+.centered {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    margin: auto;
+    margin: auto;    
 }
 
 .mine {
@@ -28,16 +33,23 @@
 
 #cell {
     position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
     background-size: 100% 100%;
 }
 
 #cell:hover {
     opacity: 0.5;
     cursor: pointer;
+}
+
+#notif {
+    width: 25%;
+    aspect-ratio: 2 / 1;
+    background: lightgrey;
+
+    border-radius: 10px;
+    
+    color: black;
+    font-size: 200%;
+
+    display: none;
 }
